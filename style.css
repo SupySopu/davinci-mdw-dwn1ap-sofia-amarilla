@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
-/* .roboto-mono-<uniquifier> {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+/* .rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
   font-style: normal;
 } */
+
 
 /* .inter-<uniquifier> {
   font-family: "Inter", sans-serif;
@@ -24,20 +24,24 @@
 /* Estilos del header */
 
 header {
-    background-color: grey;
     width: 100%;
     display: inline-block;
+    background-color: #FFD5BE;
 }
 
 header h1 {
     display: inline-block;
     padding: 1rem 2rem;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 100;
     font-size: 1.2rem;
+    color:#EE3000;
 }
 
 header nav {
     display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header ul {
@@ -52,60 +56,95 @@ header ul li{
 
 header ul li a{
     text-decoration: none;
-    color: white;
+    color: #EE3000;
     font-family: "Inter", sans-serif;
 }
 
 header ul li a:hover{
-    color: black;
+    color: #EE3000;
 }
 
 /* Estilos del inicio */
-#inicio{
-    background-color: black;
-    height: 90vh;
 
+.container-inicio{
+    background-color: #FFD5BE;
+    background-image: url('./img/waffle-inicio.png');
+    background-size: 800px auto;
+    background-position: right -50px bottom -150px;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+#inicio {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 12%;
+    padding-left: 5%;
+}
+
+#inicio img {
+    width:1000px;
 }
 
 #inicio h2{
-    font-size: 3rem;
-    font-family: "Roboto Mono", monospace;;
-    color: white;
-    
+    font-size: 4rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: bolder;
+    width: 50%;
+    letter-spacing: 10px;
+    color: #EE3000;
 }
 
 #inicio p{
     min-width: 500px;
     max-width: 600px;
-    color: rgb(241, 235, 235);
+    color: black;
     font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
-#inicio .advertencia-container {
-    padding: 16px;
-}
+/* Estilos de la historia */
 
 #historia{
-    background-color: aqua;
     height: 90vh;
+    background-color: #EE3000;
 }
 
-.custom-shape-divider-top-1776470257 {
+#historia h2{
+    font-size: 4rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: bolder;
+    color: #FFD5BE;
+}
+
+#historia p{
+    width: 500px;
+    color: #FFD5BE;
+    font-family: "Inter", sans-serif;
+    text-indent: 1rem;
+}
+
+/* Divisor css */
+
+.custom-shape-divider-bottom-1776812074 {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1776470257 svg {
+.custom-shape-divider-bottom-1776812074 svg {
     position: relative;
     display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+    width: calc(123% + 1.3px);
+    height: 95px;
 }
 
-.custom-shape-divider-top-1776470257 .shape-fill {
+.custom-shape-divider-bottom-1776812074 .shape-fill {
     fill: #EE3000;
 }
+
+/**/
