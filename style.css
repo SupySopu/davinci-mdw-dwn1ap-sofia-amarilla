@@ -157,21 +157,169 @@ header ul li a:hover{
 
 /* Estilos de Receta */
 
-#receta h2{
+#receta {
+    text-align: center;
+}
+
+#receta h2 {
     font-size: 3rem;
     font-family: "Rubik Mono One", monospace;
     font-weight: bolder;
     color: #EE3000;
+    /* Asegura que el h2 no tenga márgenes que lo desplacen */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#receta figure{
+/* El contenedor de las figuras */
+.figure-container {
+    text-align: center; /* Alinea las figuras inline-block al centro */
+    display: block;    /* Asegura que ocupe todo el ancho */
+}
+
+#receta figure {
     display: inline-block;
     text-align: center;
+    margin: 10px;      /* Espaciado opcional entre ingredientes */
+    vertical-align: top; /* Alineación vertical para que no bailen si el texto varía */
 }
 
-#receta figure img{
+#receta figure img {
     width: 90px;
     height: 90px;
     background-color: #EE3000;
     border-radius: 50%;
+}
+
+.preparacion {
+    width: 85%;
+    margin: 40px auto; /* Centra el bloque en la página */
+    background-color: #FFD5BE; /* Color crema suave */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left; /* Alinea el contenido a la izquierda para leer mejor */
+}
+
+.preparacion h3 {
+    text-align: center; /* Solo el título queda centrado */
+    margin-bottom: 25px;
+}
+
+.preparacion ol {
+    /* Dejamos el padding-left para que los números del <ol> se vean */
+    padding-left: 40px; 
+    font-family: "Inter", sans-serif;
+}
+
+.preparacion li {
+    margin-bottom: 15px;
+    color: #EE3000; /* El número del <ol> tomará este color */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.preparacion li p {
+    color: #333; /* El texto del paso vuelve a color oscuro */
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 5px 0;
+    display: block; /* Asegura que el texto ocupe su lugar */
+}
+
+/*Parte comunidad*/
+
+#comunidad {
+    padding: 50px 7%;
+    background-color: #FFD5BE;
+    text-align: center; /* Centra el título y el bloque de tarjetas */
+}
+
+#comunidad h3 {
+    font-family: "Rubik Mono One", monospace;
+    color: #EE3000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.comunidad-grid {
+    width: 100%;
+    /* Eliminamos el espacio entre inline-blocks poniendo el font-size en 0 */
+    font-size: 0; 
+}
+
+.opinion-card {
+    display: inline-block;
+    width: 45%;    /* Casi la mitad para que entren 2 por fila */
+    margin: 1%;    /* Pequeño espacio entre tarjetas */
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #EE3000;
+    border-radius: 15px;
+    vertical-align: top; /* Alinea las cajas por la parte superior */
+    box-sizing: border-box; /* Importante: incluye el padding en el ancho del 45% */
+    
+    /* Restauramos el tamaño de fuente para el texto */
+    font-size: 1rem; 
+    text-align: left;
+}
+
+#comunidad dt {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    color: #EE3000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#comunidad dd {
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    color: #333;
+    line-height: 1.4;
+    margin-left: 0; /* Quita el margen por defecto de los dd */
+}
+
+/*Opinion personal*/
+
+#opinion {
+    width: 80%;
+    margin: 50px auto; /* Centra la sección en la página */
+    padding: 20px;
+}
+
+#opinion h3 {
+    font-family: "Rubik Mono One", monospace;
+    color: #EE3000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 8px solid #EE3000; /* Línea gruesa a la izquierda típica de citas */
+    margin: 0;
+    padding: 20px 40px;
+    font-family: "Inter", sans-serif;
+}
+
+blockquote p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Estilo para resaltar partes del texto dentro de la cita */
+blockquote strong {
+    color: #EE3000;
+}
+
+/*footer*/
+
+#contacto {
+    background-color: #EE3000;
+    color:#FFD5BE;
+    font-family: "Inter", sans-serif;
 }
