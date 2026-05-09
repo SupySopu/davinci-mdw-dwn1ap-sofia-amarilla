@@ -15,10 +15,23 @@
   font-style: normal;
 } */
 
-
 * {
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+}
+
+p:hover, ul li:hover, a:hover, dd:hover, figcaption:hover {
+    cursor: url("/img/pointer.png"), pointer;
+}
+
+body {
+    cursor: url("/img/cursor.png"), auto;
 }
 
 /* Estilos del header */
@@ -57,6 +70,7 @@ header ul li a{
     text-decoration: none;
     color: #EE3000;
     font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
 }
 
 header ul li a:hover{
@@ -102,14 +116,18 @@ header ul li a:hover{
 /* Estilos de la historia */
 
 #historia{
-    height: 100vh;
+    height: 100%;
+    padding: 60px;
+    padding-bottom: 2%; 
+    margin: 0;
     background-color: #EE3000;
     display: inline-block;
+    align-content: center;
 }
 
 #historia .container-texto{
     display: inline-block;
-    padding: 30px 50px;
+    width: 50%;
 }
 
 #historia h2{
@@ -117,10 +135,11 @@ header ul li a:hover{
     font-family: "Rubik Mono One", monospace;
     font-weight: bolder;
     color: #FFD5BE;
+    margin: 0;
 }
 
 #historia p{
-    width: 500px;
+    width: 50vw;
     color: #FFD5BE;
     font-family: "Inter", sans-serif;
     padding: 10px 0;
@@ -128,13 +147,16 @@ header ul li a:hover{
 
 #historia img{
     padding-left: 30px;
-    width: 50%;
+    padding-right: 30px;
+    border-radius: 24px;
+    width: 35%;
+    vertical-align: top;
     display: inline-block;
 }
 
-/* Divisor css */
+/* Divisor css sacado de una pagina externa*/
 
-.custom-shape-divider-bottom-1776812074 {
+.custom-shape-divider-bottom-1778283520 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -144,21 +166,44 @@ header ul li a:hover{
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1776812074 svg {
+.custom-shape-divider-bottom-1778283520 svg {
     position: relative;
     display: block;
-    width: calc(123% + 1.3px);
-    height: 95px;
+    width: calc(145% + 1.3px);
+    height: 140px;
 }
 
-.custom-shape-divider-bottom-1776812074 .shape-fill {
+.custom-shape-divider-bottom-1778283520 .shape-fill {
+    fill: #EE3000;
+}
+
+.custom-shape-divider-top-1778274372 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1778274372 svg {
+    position: relative;
+    display: block;
+    width: calc(143% + 1.3px);
+    height: 111px;
+}
+
+.custom-shape-divider-top-1778274372 .shape-fill {
     fill: #EE3000;
 }
 
 /* Estilos de Receta */
 
 #receta {
+    padding-top: 100px;
+    position: relative;
     text-align: center;
+    background-color: #FFD5BE;
 }
 
 #receta h2 {
@@ -166,100 +211,156 @@ header ul li a:hover{
     font-family: "Rubik Mono One", monospace;
     font-weight: bolder;
     color: #EE3000;
-    /* Asegura que el h2 no tenga márgenes que lo desplacen */
+    padding-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* El contenedor de las figuras */
+#receta h3 {
+    font-size: 2.5rem;
+    font-family: "Rubik Mono One", monospace;
+    color: #ff653e;
+}
+
 .figure-container {
-    text-align: center; /* Alinea las figuras inline-block al centro */
-    display: block;    /* Asegura que ocupe todo el ancho */
+    text-align: center;
+    display: inline-block;
 }
 
 #receta figure {
     display: inline-block;
     text-align: center;
-    margin: 10px;      /* Espaciado opcional entre ingredientes */
-    vertical-align: top; /* Alineación vertical para que no bailen si el texto varía */
+    margin: 10px;
+    margin-bottom: 0;
+    vertical-align: top;
 }
 
 #receta figure img {
     width: 90px;
     height: 90px;
-    background-color: #EE3000;
+    background-color: #ff653e;
     border-radius: 50%;
 }
 
-.preparacion {
-    width: 85%;
-    margin: 40px auto; /* Centra el bloque en la página */
-    background-color: #FFD5BE; /* Color crema suave */
-    padding: 30px;
-    border-radius: 20px;
-    text-align: left; /* Alinea el contenido a la izquierda para leer mejor */
+#receta figure img:hover {
+    background-color: transparent;
+    transform: scale(1.3,1.3);
 }
 
-.preparacion h3 {
-    text-align: center; /* Solo el título queda centrado */
+#receta figure figcaption {
+    width: 80px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.preparacion {
+    display: inline-block;
+    width: 45%;
+    background-color: #FFD5BE;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    vertical-align: top;   
+    box-sizing: border-box;
+}
+
+.pasos-container {
+    width: 100%;
+    display: inline-block;
+}
+
+.pasos-container img{
+    display: inline-block;
+    width: 500px;
+    margin: 0;
+    align-items: center;
+}
+
+.pasos-container img:hover {
+    animation-name: platoRotador;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+/*Animacion img*/
+@keyframes platoRotador {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/**/
+
+#receta .preparacion h3 {
+    text-align: center;
     margin-bottom: 25px;
+    font-size: 2rem;
+    font-family: "Rubik Mono One", monospace;
+    color: #EE3000;
 }
 
 .preparacion ol {
-    /* Dejamos el padding-left para que los números del <ol> se vean */
     padding-left: 40px; 
     font-family: "Inter", sans-serif;
 }
 
 .preparacion li {
     margin-bottom: 15px;
-    color: #EE3000; /* El número del <ol> tomará este color */
+    color: #EE3000;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .preparacion li p {
-    color: #333; /* El texto del paso vuelve a color oscuro */
+    color: #333;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
     margin: 5px 0;
-    display: block; /* Asegura que el texto ocupe su lugar */
+    display: block;
 }
 
 /*Parte comunidad*/
 
 #comunidad {
-    padding: 50px 7%;
-    background-color: #FFD5BE;
-    text-align: center; /* Centra el título y el bloque de tarjetas */
+    padding: 8% 7%;
+    text-align: center;
+    position: relative;
+
+    background-color: #EE3000;
+    background-image: url('./img/waffle-bg.png');
+    background-repeat: repeat; 
+    background-size: 64px;
+    background-attachment: fixed;
 }
 
 #comunidad h3 {
     font-family: "Rubik Mono One", monospace;
-    color: #EE3000;
+    color:#FFD5BE;
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
-.comunidad-grid {
+.comunidad-opiniones {
     width: 100%;
-    /* Eliminamos el espacio entre inline-blocks poniendo el font-size en 0 */
-    font-size: 0; 
 }
 
-.opinion-card {
+.opinion-individual {
     display: inline-block;
-    width: 45%;    /* Casi la mitad para que entren 2 por fila */
-    margin: 1%;    /* Pequeño espacio entre tarjetas */
+    width: 45%;
+    margin: 1%;
     padding: 20px;
-    background-color: white;
-    border: 3px solid #EE3000;
+    background-color:#FFD5BE;
+    border: 3px solid #ffded5;
     border-radius: 15px;
-    vertical-align: top; /* Alinea las cajas por la parte superior */
-    box-sizing: border-box; /* Importante: incluye el padding en el ancho del 45% */
-    
-    /* Restauramos el tamaño de fuente para el texto */
+    vertical-align: top;
+    box-sizing: border-box;
     font-size: 1rem; 
     text-align: left;
 }
@@ -275,29 +376,26 @@ header ul li a:hover{
 #comunidad dd {
     font-family: "Inter", sans-serif;
     font-style: italic;
-    color: #333;
-    line-height: 1.4;
-    margin-left: 0; /* Quita el margen por defecto de los dd */
+    margin-left: 0;
 }
 
 /*Opinion personal*/
 
 #opinion {
     width: 80%;
-    margin: 50px auto; /* Centra la sección en la página */
     padding: 20px;
+    margin: 0% auto;
 }
 
 #opinion h3 {
     font-family: "Rubik Mono One", monospace;
-    color: #EE3000;
+    color: #FFD5BE;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 blockquote {
-    background-color: #f9f9f9;
-    border-left: 8px solid #EE3000; /* Línea gruesa a la izquierda típica de citas */
+    background-color: #FFD5BE;
+    border-left: 8px solid #ff653e;
     margin: 0;
     padding: 20px 40px;
     font-family: "Inter", sans-serif;
@@ -307,19 +405,79 @@ blockquote p {
     font-style: italic;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #444;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Estilo para resaltar partes del texto dentro de la cita */
-blockquote strong {
-    color: #EE3000;
+strong {
+    font-weight: 400;
+}
+
+/*divider css*/
+
+.custom-shape-divider-bottom-1778273678 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1778273678 svg {
+    position: relative;
+    display: block;
+    width: calc(126% + 1.3px);
+    height: 117px;
+}
+
+.custom-shape-divider-bottom-1778273678 .shape-fill {
+    fill: #FFD5BE; 
 }
 
 /*footer*/
 
 #contacto {
-    background-color: #EE3000;
-    color:#FFD5BE;
+    background-color: #FFD5BE;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
     font-family: "Inter", sans-serif;
+}
+
+#contacto div {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top; 
+    text-align: center;
+    font-size: 1rem;
+}
+
+#contacto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #EE3000;
+}
+
+#contacto h4 {
+    color: #EE3000;
+    font-family: "Rubik Mono One", monospace;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#contacto p {
+    margin-bottom: 10px;
+}
+
+#contacto a {
+    display: block;
+    color: rgb(238, 48, 0);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#contacto a:hover{
+    color: rgb(238, 48, 0, 0.5);
 }
