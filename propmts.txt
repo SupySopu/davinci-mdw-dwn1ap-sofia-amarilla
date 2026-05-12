@@ -1,3 +1,0 @@
-"Tengo una página sobre waffles, tiene una sección de historia, recetas y sobre la opinion de la comunidad. 
- Necesito que me generes una opinion de Eren Jaeger, Mikasa Ackerman, Armin Arlert y Sasha Blouse como si 
-estuvieran hablando de los waffles y lo mucho que les gusta. Que no tenga más de 50 palabras."
