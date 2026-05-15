@@ -7,4 +7,4 @@ ALUMNO: Amarilla Sofia
 CUATRIMESTRE: 1er Cuatrimestre
 COMISIÓN: dwm1ap
 TURNO: Noche
-FECHA DE ENTREGA: 
+FECHA DE ENTREGA: 08/07/2026
