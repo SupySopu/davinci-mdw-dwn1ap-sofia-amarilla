@@ -32,6 +32,8 @@ p:hover, ul li:hover, a:hover, dd:hover, figcaption:hover {
 
 body {
     cursor: url("/img/cursor.png"), auto;
+    max-width: 1366px;
+    min-width: 1350px;
 }
 
 /* Estilos del header */
@@ -85,7 +87,7 @@ header ul li a:hover{
     background-size: 1100px auto;
     background-position: right -50px bottom -150px;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 88vh;
 }
 
 #inicio {
