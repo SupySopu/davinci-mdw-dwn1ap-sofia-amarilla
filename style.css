@@ -83,8 +83,8 @@ header ul li a:hover{
 .container-inicio{
     background-color: #FFD5BE;
     background-image: url('./img/waffle-inicio.png');
-    background-size: 80% auto;
-    background-position: right -50px bottom -130px;
+    background-size: 90% auto;
+    background-position: right -50px bottom -60px;
     background-repeat: no-repeat;
     height: 88vh;
     width: 100%;
@@ -94,14 +94,14 @@ header ul li a:hover{
 #inicio {
     margin-top: auto;
     margin-bottom: auto;
-    padding-top: 12%;
-    padding-left: 7%;
+    padding-top: 18%;
+    padding-left: 6%;
     
 }
 
 
 #inicio h2{
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: "Rubik Mono One", monospace;
     font-weight: bolder;
     width: 50%;
@@ -173,7 +173,7 @@ header ul li a:hover{
     position: relative;
     display: block;
     width: calc(126% + 1.3px);
-    height: 100px;
+    height: 117px;
 }
 
 .custom-shape-divider-bottom-1778283520 .shape-fill {
